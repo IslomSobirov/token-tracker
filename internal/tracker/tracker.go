@@ -64,7 +64,6 @@ func (tt *TokenTracker) Deposit(ctx context.Context, address string, amount uint
 	tt.mu.Lock()
 	defer tt.mu.Unlock()
 
-	// In a real implementation, this would interact with the Solana program
 	tt.balances[address] += amount
 	tt.history[address] = append(tt.history[address], Transaction{
 		Type:      "deposit",
@@ -85,7 +84,6 @@ func (tt *TokenTracker) Withdraw(ctx context.Context, address string, amount uin
 		return fmt.Errorf("insufficient balance")
 	}
 
-	// In a real implementation, this would interact with the Solana program
 	tt.balances[address] -= amount
 	tt.history[address] = append(tt.history[address], Transaction{
 		Type:      "withdraw",
