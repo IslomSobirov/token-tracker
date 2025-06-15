@@ -33,7 +33,7 @@ A Go-based token tracking application that interacts with the Solana blockchain.
 
 1. Clone the repository:
 ```bash
-git clone <repository-url>
+git clone [<repository-url>](https://github.com/IslomSobirov/token-tracker)
 cd token-tracker
 ```
 
